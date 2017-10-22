@@ -2,15 +2,18 @@ import React from 'react';
 import { StackNavigator, DrawerNavigator, TabNavigator} from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
+import { CustomDrawerComponent } from './../components/customDrawer';
+
 //screens
 import { Login } from './../screens/Login';
 import { SignUpScreen } from './../screens/SignUpScreen';
 import { AskQuestion } from './../screens/askQuestion';
 // import { ViewPrognosis } from './../screens/viewPrognosis';
-import { CustomDrawerComponent } from './../components/customDrawer';
 import { MyQuestions } from './../screens/myQuestions';
 import { QuestionAnswers } from './../screens/questionAnswers';
 import { AllQuestions } from './../screens/allQuestions';
+import { About } from './../screens/about';
+import { Profile } from './../screens/profile';
 
 
 
@@ -54,14 +57,18 @@ const tabs = TabNavigator({
 
 
 export const SimpleApp = StackNavigator({
-	// Home: 		{screen: MyAppDrawer},
-	Login: 		 	{ screen: Login },
-  	SignUp: 		{ screen: SignUpScreen },
-	askQuestion: 	{ screen: AskQuestion },
+	// Home: 			{screen: MyAppDrawer},
+	Login: 		 		{ screen: Login },
+  	SignUp: 			{ screen: SignUpScreen },
+	askQuestion: 		{ screen: AskQuestion },
 	// Prognosis: 	 	{ screen: ViewPrognosis },
-	myQuestions: 	 { screen: tabs },
-	QuestionAnswers: 	 { screen: QuestionAnswers },
+	myQuestions: 	 	{ screen: tabs },
+	QuestionAnswers: 	{ screen: QuestionAnswers },
+	About: 				{ screen: About },
+	Profile: 			{ screen: Profile },
 });
+
+
 
 export const MyAppDrawer = DrawerNavigator(
 	{

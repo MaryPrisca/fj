@@ -62,13 +62,14 @@ export class CustomDrawerComponent extends Component {
 
 					<DrawerButton onPress={() => navigate('myQuestions')} customText="Home" iconName="home" />
 					<DrawerButton onPress={() => navigate('postRequest')} customText="Ask a Question"  iconName="mode-edit" />
-					<DrawerButton onPress={this.logout} customText="Logout" iconName="open-in-new" />
+					<DrawerButton onPress={() => navigate('Profile')} customText="My Profile"  iconName="account-circle" />
 
 					<View style={{height: 8}}></View>
 					<Divider style={{ backgroundColor: '#f4f4f4' }} />
 
 					<DrawerButton onPress={this.shareApp} customText="Share" iconName="share" />
-					<DrawerButton onPress={this.shareApp} customText="About" iconName="info" />
+					<DrawerButton onPress={() => navigate('About')} customText="About" iconName="info" />
+					<DrawerButton onPress={this.logout} customText="Logout" iconName="open-in-new" />
 
 				</ScrollView>
 			</View>
